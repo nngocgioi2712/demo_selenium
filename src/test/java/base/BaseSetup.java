@@ -6,7 +6,7 @@ import org.testng.annotations.*;
 
 public class BaseSetup {
     private WebDriver driver;
-    public String driverpath = "./chromedriver.exe";
+    private String driverpath = "./chromedriver.exe";
 
     public WebDriver getDriver(){
         return driver;
