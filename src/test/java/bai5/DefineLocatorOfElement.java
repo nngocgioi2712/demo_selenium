@@ -27,7 +27,8 @@ public class DefineLocatorOfElement {
         WebElement byTagName = driver.findElement(By.tagName("a"));
 //        6. ClassName (không chính xác, nhiều pt chung class)
         WebElement byClassName = driver.findElement(By.className("classname"));
-            //Xpath
+            //Xpath (XML path)
+        //Xpath tuyệt đối
 
 
     }
