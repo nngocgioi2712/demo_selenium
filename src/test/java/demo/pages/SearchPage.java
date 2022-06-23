@@ -2,11 +2,12 @@ package demo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class SearchPage {
     WebDriver driver;
 
-    By input = By.tagName("input");
+    private By input = By.tagName("input");
 
     public SearchPage(WebDriver driver){
         this.driver = driver;
@@ -18,6 +19,12 @@ public class SearchPage {
 
     public boolean verifyOpenPage(String expectedTitle){
         return driver.getTitle().equals(expectedTitle) ? true : false;
+    }
+
+    public void enterInput(String text){
+        WebElement element = driver.findElement(input);
+        element.sendKeys(text);
+        element.sendKeys("Keys.ENTER");
     }
 
 
