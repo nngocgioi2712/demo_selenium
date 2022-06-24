@@ -14,7 +14,6 @@ public class OpenPage extends BaseSetup {
     private WebDriver driver;
     private SearchPage searchPage;
 
-
     @BeforeClass
     public void setup(){
         this.driver = getDriver();
