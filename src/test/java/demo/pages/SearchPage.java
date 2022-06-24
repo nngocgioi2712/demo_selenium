@@ -13,9 +13,9 @@ public class SearchPage {
         this.driver = driver;
     }
 
-    public void openPage(){
+/*    public void openPage(){
         driver.navigate().to("https://www.google.com.vn/");
-    }
+    }*/
 
     public boolean verifyOpenPage(String expectedTitle){
         return driver.getTitle().equals(expectedTitle) ? true : false;
@@ -24,8 +24,6 @@ public class SearchPage {
     public void enterInput(String text){
         WebElement element = driver.findElement(input);
         element.sendKeys(text);
-        element.sendKeys("Keys.ENTER");
     }
-
 
 }

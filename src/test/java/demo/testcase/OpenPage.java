@@ -22,7 +22,7 @@ public class OpenPage extends BaseSetup {
     @Test (priority = 0)
     public void verifyOpenPage(){
         searchPage = new SearchPage(driver);
-        searchPage.openPage();
+        //searchPage.openPage();
         Assert.assertTrue(searchPage.verifyOpenPage("Google"), "title: " + driver.getTitle());
     }
 }
