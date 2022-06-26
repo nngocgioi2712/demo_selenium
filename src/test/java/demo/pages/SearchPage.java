@@ -1,6 +1,7 @@
 package demo.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -24,6 +25,7 @@ public class SearchPage {
     public void enterInput(String text){
         WebElement element = driver.findElement(input);
         element.sendKeys(text);
+        element.sendKeys(Keys.ENTER);
     }
 
 }

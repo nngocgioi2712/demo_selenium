@@ -3,9 +3,7 @@ package demo.base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 public class BaseSetup {
     private WebDriver driver = null;
@@ -25,8 +23,16 @@ public class BaseSetup {
     @BeforeClass
     public void init(){
         setDriver("https://www.google.com.vn/");
+        System.out.println("beforeClass");
     }
-
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("beforeTest");
+    }
+    @BeforeMethod
+    public void before(){
+        System.out.println("beforemethod");
+    }
     @AfterClass
     public void closeBrowser(){
         driver.close();
