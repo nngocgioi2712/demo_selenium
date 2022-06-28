@@ -6,6 +6,8 @@ import demo.pages.SearchPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.testng.TestRunner.PriorityWeight.priority;
@@ -19,10 +21,15 @@ public class OpenPage extends BaseSetup {
         this.driver = getDriver();
     }
 
+
     @Test (priority = 0)
     public void verifyOpenPage(){
         searchPage = new SearchPage(driver);
-        searchPage.openPage();
+        //searchPage.openPage();
         Assert.assertTrue(searchPage.verifyOpenPage("Google"), "title: " + driver.getTitle());
+    }
+    @Test
+    public void test1(){
+        System.out.println("annotation");
     }
 }
