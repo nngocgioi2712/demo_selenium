@@ -33,8 +33,8 @@ public class BaseSetup {
     public void before(){
         System.out.println("beforemethod");
     }
-    @AfterClass
+/*    @AfterClass
     public void closeBrowser(){
-        driver.close();
-    }
+        driver.close();*/
+//    }
 }

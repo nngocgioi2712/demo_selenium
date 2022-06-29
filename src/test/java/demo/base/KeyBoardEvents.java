@@ -9,6 +9,5 @@ public class KeyBoardEvents {
         Actions action = new Actions(driver);
         action.sendKeys(Keys.ENTER);
         action.perform();
-
     }
 }
