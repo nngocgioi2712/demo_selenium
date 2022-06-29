@@ -21,7 +21,6 @@ public class SearchPage {
     public boolean verifyOpenPage(String expectedTitle){
         return driver.getTitle().equals(expectedTitle) ? true : false;
     }
-
     public void enterInput(String text){
         WebElement element = driver.findElement(input);
         element.sendKeys(text);

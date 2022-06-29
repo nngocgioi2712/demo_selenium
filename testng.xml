@@ -19,22 +19,4 @@
 <!--            </class>-->
 <!--        </classes>-->
     </test>
-    <test name="FirstTest">
-        <packages>
-            <package name="demo.testcase">
-            </package>
-        </packages>
-        <!--        <classes>-->
-        <!--            <class name="demo.testcase.OpenPage" >-->
-        <!--                <methods>-->
-        <!--                    <include name="verifyOpenPage"/>-->
-        <!--                </methods>-->
-        <!--            </class>-->
-        <!--            <class name="demo.testcase.SearchText">-->
-        <!--                <methods>-->
-        <!--                    <exclude name="enterText"/>-->
-        <!--                </methods>-->
-        <!--            </class>-->
-        <!--        </classes>-->
-    </test>
 </suite>
