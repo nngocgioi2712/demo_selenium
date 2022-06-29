@@ -1,17 +1,12 @@
 package demo.testcase;
 
-import com.sun.source.tree.AssertTree;
-import demo.base.BaseSetup;
+import demo.common.BaseSetup;
 import demo.pages.SearchPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import static org.testng.TestRunner.PriorityWeight.priority;
 
 public class OpenPage extends BaseSetup {
     private WebDriver driver;

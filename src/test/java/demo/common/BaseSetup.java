@@ -1,9 +1,10 @@
-package demo.base;
+package demo.common;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
+
+import java.util.concurrent.TimeUnit;
 
 public class BaseSetup {
     private WebDriver driver = null;
@@ -23,18 +24,7 @@ public class BaseSetup {
     @BeforeClass
     public void init(){
         setDriver("https://www.google.com.vn/");
-        System.out.println("beforeClass");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
-    @BeforeTest
-    public void beforeTest(){
-        System.out.println("beforeTest");
-    }
-    @BeforeMethod
-    public void before(){
-        System.out.println("beforemethod");
-    }
-/*    @AfterClass
-    public void closeBrowser(){
-        driver.close();*/
-//    }
+
 }
