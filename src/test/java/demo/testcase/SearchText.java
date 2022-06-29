@@ -1,12 +1,12 @@
 package demo.testcase;
 
-import demo.base.BaseSetup;
+import demo.common.BaseSetup;
 import demo.pages.ResultPage;
 import demo.pages.SearchPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import demo.base.KeyBoardEvents;
+import demo.common.KeyBoardEvents;
 
 public class SearchText extends BaseSetup {
     private WebDriver driver;

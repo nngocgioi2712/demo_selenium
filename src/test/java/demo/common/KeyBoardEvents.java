@@ -1,4 +1,4 @@
-package demo.base;
+package demo.common;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
