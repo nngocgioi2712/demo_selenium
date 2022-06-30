@@ -1,6 +1,7 @@
 package demo.testcase;
 
 import demo.common.BaseSetup;
+import demo.common.helper.ExcelHelper;
 import demo.pages.ResultPage;
 import demo.pages.SearchPage;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ public class SearchText extends BaseSetup {
     private WebDriver driver;
     private SearchPage searchPage;
     private ResultPage resultPage;
+            ExcelHelper excel = new ExcelHelper();
     private KeyBoardEvents event;
     @BeforeClass
     public void setup(){
