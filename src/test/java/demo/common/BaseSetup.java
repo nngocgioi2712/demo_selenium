@@ -26,5 +26,9 @@ public class BaseSetup {
         setDriver("https://www.google.com.vn/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
+    @AfterClass
+    public void closeBrowser(){
+        driver.close();
+    }
 
 }

@@ -16,10 +16,11 @@ public class ResultPage {
     private WebDriverWait wait;
 
     @FindBy(tagName = "input")
-    WebElement inputSearch;
+    private WebElement inputSearch;
     @FindBy(xpath = "//a/h3")
-    List<WebElement> resultList;
-    private By calculationResult = By.id("cwos");
+    private List<WebElement> resultList;
+    @FindBy(id = "cwos")
+    private WebElement calculationResult;
     public ResultPage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, 10);
@@ -31,7 +32,7 @@ public class ResultPage {
 
         int i = 0;
         while (i < expected.length){
-            if(!resultList.get(i).equals(expected[i])){
+            if(!(resultList.get(i).getText().equals(expected[i]))){
                 System.out.println("Actual: " + resultList.get(i).getText() + " and Expected is " + expected[i]);
                 return false;
             }
@@ -39,7 +40,11 @@ public class ResultPage {
         }
         return true;
     }
-    public void verifyCalculationResult(){
+    public boolean verifyCalculationResult(String text, String expectedResult){
+
+        wait.until(ExpectedConditions.titleIs(text + " - Tìm trên Google"));
+        wait.until(ExpectedConditions.textToBePresentInElementValue(inputSearch, text));
+        return calculationResult.getText().equals(expectedResult) ? true : false;
 
     }
 }

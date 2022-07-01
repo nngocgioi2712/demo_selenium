@@ -2,21 +2,24 @@
 
 <suite name="TestSuiteGoogle" verbose="1">
     <test name="FirstTest">
-        <packages>
-            <package name="demo.testcase">
-            </package>
-        </packages>
-<!--        <classes>-->
-<!--            <class name="demo.testcase.OpenPage" >-->
-<!--                <methods>-->
-<!--                    <include name="verifyOpenPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="demo.testcase.SearchText">-->
-<!--                <methods>-->
-<!--                    <exclude name="enterText"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
+<!--        <packages>-->
+<!--            <package name="demo.testcase">-->
+<!--            </package>-->
+<!--        </packages>-->
+        <classes>
+            <class name="demo.testcase.OpenPage" >
+                <methods>
+                    <include name="verifyOpenPage"/>
+                </methods>
+            </class>
+            <class name="demo.testcase.SearchText">
+                <methods>
+                    <exclude name="enterText"/>
+                </methods>
+            </class>
+            <class name="demo.testcase.SearchExpression">
+
+            </class>
+        </classes>
     </test>
 </suite>

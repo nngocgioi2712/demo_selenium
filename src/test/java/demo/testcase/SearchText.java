@@ -5,6 +5,7 @@ import demo.common.helper.ExcelHelper;
 import demo.pages.ResultPage;
 import demo.pages.SearchPage;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import demo.common.KeyBoardEvents;
@@ -26,11 +27,12 @@ public class SearchText extends BaseSetup {
         String input = "Selenium";
         String[] expectedResultList = {
                 "Selenium",
-                "Selenium with Python — Selenium Python Bindings 2 ...",
-                "Selenium - A browser automation framework and ecosystem."
+                "Selenium là gì? Một số kinh nghiệm làm việc với Selenium",
+                "Làm quen: Tóm tắt cơ bản về Selenium | TopDev"
         };
         searchPage.enterInput(input);
-        resultPage.verifyResultList(input, expectedResultList);
+
+        Assert.assertTrue(resultPage.verifyResultList(input, expectedResultList), "Fail");
     }
 
 }
