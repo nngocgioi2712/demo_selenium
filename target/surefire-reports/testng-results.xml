@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-03T20:19:04 ICT" name="TestSuiteGoogle" finished-at="2022-07-03T20:19:32 ICT" duration-ms="27769">
+    <groups>
+    </groups>
+    <test started-at="2022-07-03T20:19:04 ICT" name="FirstTest" finished-at="2022-07-03T20:19:32 ICT" duration-ms="27769">
+      <class name="demo.testcase.OpenPage">
+        <test-method is-config="true" signature="init()[pri:0, instance:demo.testcase.OpenPage@79ad8b2f]" started-at="2022-07-03T20:19:04 ICT" name="init" finished-at="2022-07-03T20:19:14 ICT" duration-ms="9981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:demo.testcase.OpenPage@79ad8b2f]" started-at="2022-07-03T20:19:14 ICT" name="setup" finished-at="2022-07-03T20:19:14 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyOpenPage(java.lang.reflect.Method)[pri:0, instance:demo.testcase.OpenPage@79ad8b2f]" started-at="2022-07-03T20:19:14 ICT" name="verifyOpenPage" finished-at="2022-07-03T20:19:14 ICT" duration-ms="71" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void demo.testcase.OpenPage.verifyOpenPage(java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOpenPage -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:demo.testcase.OpenPage@79ad8b2f]" started-at="2022-07-03T20:19:14 ICT" name="takeScreenshot" finished-at="2022-07-03T20:19:15 ICT" duration-ms="138" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyOpenPage status=SUCCESS method=OpenPage.verifyOpenPage(java.lang.reflect.Method)[pri:0, instance:demo.testcase.OpenPage@79ad8b2f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:demo.testcase.OpenPage@79ad8b2f]" started-at="2022-07-03T20:19:15 ICT" name="closeBrowser" finished-at="2022-07-03T20:19:19 ICT" duration-ms="4163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- demo.testcase.OpenPage -->
+      <class name="demo.testcase.SearchExpression">
+        <test-method is-config="true" signature="init()[pri:0, instance:demo.testcase.SearchExpression@f8c1ddd]" started-at="2022-07-03T20:19:19 ICT" name="init" finished-at="2022-07-03T20:19:21 ICT" duration-ms="2701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:demo.testcase.SearchExpression@f8c1ddd]" started-at="2022-07-03T20:19:21 ICT" name="setUp" finished-at="2022-07-03T20:19:22 ICT" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchExpression()[pri:0, instance:demo.testcase.SearchExpression@f8c1ddd]" started-at="2022-07-03T20:19:22 ICT" name="searchExpression" finished-at="2022-07-03T20:19:28 ICT" duration-ms="6057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchExpression -->
+        <test-method is-config="true" signature="stopRecord()[pri:0, instance:demo.testcase.SearchExpression@f8c1ddd]" started-at="2022-07-03T20:19:28 ICT" name="stopRecord" finished-at="2022-07-03T20:19:28 ICT" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopRecord -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:demo.testcase.SearchExpression@f8c1ddd]" started-at="2022-07-03T20:19:28 ICT" name="closeBrowser" finished-at="2022-07-03T20:19:32 ICT" duration-ms="4257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- demo.testcase.SearchExpression -->
+    </test> <!-- FirstTest -->
+  </suite> <!-- TestSuiteGoogle -->
+</testng-results>

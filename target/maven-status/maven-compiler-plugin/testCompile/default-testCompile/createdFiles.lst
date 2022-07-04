@@ -1,0 +1,7 @@
+demo\common\KeyBoardEvents.class
+demo\testcase\OpenPage.class
+demo\testcase\SearchExpression.class
+demo\common\BaseSetup.class
+demo\pages\ResultPage.class
+demo\pages\SearchPage.class
+demo\testcase\SearchText.class
