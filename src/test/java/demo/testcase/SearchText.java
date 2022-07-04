@@ -26,9 +26,7 @@ public class SearchText extends BaseSetup {
         resultPage = new ResultPage(driver);
         String input = "Selenium";
         String[] expectedResultList = {
-                "Selenium",
-                "Selenium là gì? Một số kinh nghiệm làm việc với Selenium",
-                "Làm quen: Tóm tắt cơ bản về Selenium | TopDev"
+                "Selenium"
         };
         searchPage.enterInput(input);
 

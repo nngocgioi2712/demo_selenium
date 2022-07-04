@@ -25,13 +25,14 @@ public class ExcelHelper {
             File f = new File(excelPath);
             if(!f.exists()){
                 f.createNewFile();
-                System.out.println("File doesn't exist");
+                System.out.println("File doesn't exist. Then created " + excelPath);
             }
             fIn = new FileInputStream(excelPath);
             wb = WorkbookFactory.create(fIn);
             sh = wb.getSheet(sheetName);
             if(sh == null){
                 sh = wb.createSheet(sheetName);
+               // System.out.println("File doesn't exist. Then created " + excelPath);
             }
             this.excelFilePath = excelPath;
 
@@ -45,32 +46,52 @@ public class ExcelHelper {
     public String getCellData(int rownum, int colnum) throws Exception{
         try{
             cell = sh.getRow(rownum).getCell(colnum);
-            String CellData = null;
+            String cellData = null;
             switch (cell.getCellType()){
                 case STRING:
-                    CellData = cell.getStringCellValue();
+                    cellData = cell.getStringCellValue();
                     break;
                 case NUMERIC:
                     if(DateUtil.isCellDateFormatted(cell)){
-                        CellData = String.valueOf(cell.getDateCellValue());
+                        cellData = String.valueOf(cell.getDateCellValue());
                     }else{
-                        CellData = String.valueOf((long)cell.getNumericCellValue());
+                        cellData = String.valueOf((long)cell.getNumericCellValue());
                     }
                     break;
                 case BOOLEAN:
-                    CellData = Boolean.toString(cell.getBooleanCellValue());
+                    cellData = Boolean.toString(cell.getBooleanCellValue());
                     break;
                 case BLANK:
-                    CellData = "";
+                    cellData = "";
                     break;
             }
-            return CellData;
+            return cellData;
         }catch (Exception e){
             return "";
         }
     }
     public String getCellData(String columnName, int rownum) throws Exception{
         return getCellData(rownum, columns.get(columnName));
+    }
+    public void setCellData(String text, int rownum, int colnum) throws Exception{
+        try{
+            row = sh.getRow(rownum);
+            if(row == null){
+                row = sh.createRow(rownum);
+            }
+            cell = row.getCell(colnum);
+            if(cell == null){
+                cell = row.createCell(colnum);
+            }
+            cell.setCellValue(text);
+            fOut = new FileOutputStream(excelFilePath);
+            wb.write(fOut);
+            fOut.flush();
+            fOut.close();
+        }
+        catch(Exception e){
+            throw (e);
+        }
     }
 
 }

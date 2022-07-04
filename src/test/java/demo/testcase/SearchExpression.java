@@ -2,10 +2,13 @@ package demo.testcase;
 
 import demo.common.BaseSetup;
 import demo.common.helper.ExcelHelper;
+import demo.common.helper.PropertiesHelper;
+import demo.common.helper.RecordVideo;
 import demo.pages.ResultPage;
 import demo.pages.SearchPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,18 +19,24 @@ public class SearchExpression extends BaseSetup {
     private ExcelHelper excel;
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() throws Exception{
         driver = getDriver();
         excel = new ExcelHelper();
+        RecordVideo.startRecord("Test");
+    }
+    @AfterClass
+    public void stopRecord() throws Exception{
+        RecordVideo.stopRecord();
     }
     @Test
     public void searchExpression() throws Exception{
-        excel.setExcelFile("D:\\0.GIOINN\\AUTO_selenium\\demo_selenium\\data-test.xlsx", "Sheet1");
+        String path = System.getProperty("user.dir");
+        excel.setExcelFile("src/test/resources/data-test.xlsx", "Sheet1");
         String data1 = excel.getCellData("input", 1);
         int n = Integer.parseInt(data1);
         String dataExpected = excel.getCellData("expected", 1);
-        System.out.println(data1);
-        System.out.println(dataExpected);
+        //PropertiesHelper.setFile("src/test/resources/configs.properties");
+        //System.out.println(PropertiesHelper.getValue("input1"));
         String text = "";
         int sum = n;
         int i = 1;
@@ -40,6 +49,8 @@ public class SearchExpression extends BaseSetup {
         searchPage = new SearchPage(driver);
         resultPage = new ResultPage(driver);
         searchPage.enterInput(text);
+        excel.setCellData("pass", 1, 3);
+        //PropertiesHelper.setValue("test1", "pass");
         Assert.assertTrue(resultPage.verifyCalculationResult(text, dataExpected), "Fail");
     }
 }

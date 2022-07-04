@@ -42,7 +42,7 @@ public class ResultPage {
     }
     public boolean verifyCalculationResult(String text, String expectedResult){
 
-        wait.until(ExpectedConditions.titleIs(text + " - Tìm trên Google"));
+        //wait.until(ExpectedConditions.titleIs(text + " - Tìm trên Google"));
         wait.until(ExpectedConditions.textToBePresentInElementValue(inputSearch, text));
         return calculationResult.getText().equals(expectedResult) ? true : false;
 

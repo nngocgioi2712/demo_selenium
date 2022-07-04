@@ -6,13 +6,27 @@
 
     <groupId>org.example</groupId>
     <artifactId>demo_selenium</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+    <version>1.0</version>
+    <build>
+<!--        <sourceDirectory></sourceDirectory>-->
+        <plugins>
+            <plugin>
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.19.1</version>
+                <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -49,7 +63,12 @@
             <version>5.2.2</version>
         </dependency>
 
-
+        <!-- https://mvnrepository.com/artifact/com.github.stephenc.monte/monte-screen-recorder -->
+        <dependency>
+            <groupId>com.github.stephenc.monte</groupId>
+            <artifactId>monte-screen-recorder</artifactId>
+            <version>0.7.7.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
         <dependency>
             <groupId>org.slf4j</groupId>

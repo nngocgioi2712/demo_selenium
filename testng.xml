@@ -12,11 +12,11 @@
                     <include name="verifyOpenPage"/>
                 </methods>
             </class>
-            <class name="demo.testcase.SearchText">
-                <methods>
-                    <exclude name="enterText"/>
-                </methods>
-            </class>
+<!--            <class name="demo.testcase.SearchText">-->
+<!--                <methods>-->
+<!--                    <exclude name="enterText"/>-->
+<!--                </methods>-->
+<!--            </class>-->
             <class name="demo.testcase.SearchExpression">
 
             </class>
